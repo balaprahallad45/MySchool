@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My School</title>
+</head>
+<body>
+    <h1>Welcome to My School!</h1>
+
+    <a href="{% url 'student_create' %}">Add Student</a>
+
+    <h2>Students</h2>
+    <ul>
+        {% for student in students %}
+            <li>
+                <a href="{% url 'student_read' student.pk %}">{{ student.name }}</a> (Grade {{ student.grade }})
+                <a href="{% url 'student_update' student.pk %}">Update</a>
+                <a href="{% url 'student_delete' student.pk %}">Delete</a>
+            </li>
+        {% empty %}  <li>No students yet.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'teacher_create' %}">Add Teacher</a>
+
+    <h2>Teachers</h2>
+    <ul>
+        {% for teacher in teachers %}
+            <li>
+                <a href="{% url 'teacher_read' teacher.pk %}">{{ teacher.name }}</a> ({{ teacher.subject }})
+                <a href="{% url 'teacher_update' teacher.pk %}">Update</a>
+                <a href="{% url 'teacher_delete' teacher.pk %}">Delete</a>
+            </li>
+        {% empty %}  <li>No teachers yet.</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h1>{{ teacher.name }}</h1>
+<p>Subject: {{ teacher.subject }}</p>
+<a href="{% url 'teacher_update' teacher.pk %}">Update</a>
+<a href="{% url 'teacher_delete' teacher.pk %}">Delete</a>
+<a href="{% url 'index' %}">Back to List</a>
+
