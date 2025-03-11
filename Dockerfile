@@ -15,6 +15,7 @@ RUN pip install --upgrade pip && \
 COPY . /app/
 
 # # Run database migrations
+# RUN python manage.py makemigrations
 # RUN python manage.py migrate
 
 # # Collect static files
