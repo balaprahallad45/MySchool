@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Student, Teacher
 from .forms import StudentForm, TeacherForm  # Create forms (see below)
 
+
+print("Helloooooo")
+
 def index(request):
     students = Student.objects.all()
     teachers = Teacher.objects.all()
