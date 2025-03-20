@@ -4,6 +4,7 @@ from .forms import StudentForm, TeacherForm  # Create forms (see below)
 
 
 print("Helloooooo")
+print("Hi")
 
 def index(request):
     students = Student.objects.all()
